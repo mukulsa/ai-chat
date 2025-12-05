@@ -111,7 +111,7 @@ async def chat_stream_handler(
             if context:
                 prompt_messages = PromptTemplate.from_string(
                     'You are a helpful assistant that answers some questions '
-                    'with the help of some context data.\n\nHere is '
+                    'with the help of some context data. If you dont know say "Sorry".\n\nHere is '
                     'the context data:\n\n{{context}}').create_messages(data=dict(context=context))
                 logger.info(f"{prompt_messages=}")
             else:
