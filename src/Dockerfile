@@ -25,7 +25,7 @@ WORKDIR /code/frontend
 
 RUN rm -f package-lock.json pnpm-lock.yaml yarn.lock \
     && rm -rf node_modules \
-    %% pnpm install --no-frozen-lockfile \
+    && pnpm install --no-frozen-lockfile \
     && pnpm build 
     # && rm -rf /root/.local/share/pnpm \
     # && rm -rf /root/.pnpm-store
